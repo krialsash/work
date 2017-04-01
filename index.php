@@ -6,7 +6,7 @@ echo ('Add your information about problem:')
 
 ?>
 
-<form action="forma.php" method="post">
+<form action="index.php" method="post">
 
     <p>Name: <input type="text" name="name"></p>
 
