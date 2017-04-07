@@ -15,12 +15,13 @@ echo ('Problem:');
     $result = $pdo_statement->fetchAll();
 ?>
 
-<table border="1">
-    <tr>
+<table border="1" >
+    <tr align="center" >
         <td>Id: </td>
         <td>Name: </td>
         <td>Description:</td>
         <td>Date:</td>
+        <td>Action:</td>
     </tr>
     <tr><?php foreach($result as &$value) { ?>
        <td><?php echo ($value['id']) ?></td>
