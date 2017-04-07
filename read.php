@@ -13,23 +13,25 @@ echo ('Problem:');
     $pdo_statement = $pdo->prepare($sql);
     $pdo_statement->execute();
     $result = $pdo_statement->fetchAll();
-
-    foreach ($result as &$value){
-     }
 ?>
 
-<table>
+<table border="1">
     <tr>
         <td>Id: </td>
         <td>Name: </td>
         <td>Description:</td>
         <td>Date:</td>
     </tr>
-   <tr>
-        <td><?php echo ($value['id']) ?></td>
-        <td><?php echo ($value['name']) ?></td>
-        <td><?php echo ($value['description']) ?></td>
-        <td><?php echo ($value['created_at']) ?></td>
-    </tr>
+    <tr><?php foreach($result as &$value) { ?>
+       <td><?php echo ($value['id']) ?></td>
+       <td><?php echo ($value['name']) ?></td>
+       <td><?php echo ($value['description']) ?></td>
+       <td><?php echo ($value['created_at']) ?></td>
+        <td>
+            <a href="Update.php?id=<?php echo $value['id'];?>"> Update</a>
+            <a href="Delete.php?id=<?php echo $value['id'];?>"> Delete</a>
+        </td>
+       </tr>
+    <?php } ?>
 </table>
 
