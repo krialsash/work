@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     $pdo_statement = $pdo->prepare($sql);
     $pdo_statement->bindParam(':id', $_GET['id']);
     $Result = $pdo_statement->execute();
-    var_dump($Result);
+    //var_dump($Result);
 
     header ("Location: read.php");
     exit(); // возвращаемся в read.php

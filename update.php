@@ -13,6 +13,9 @@
         $pdo_statement->bindParam(':id', $_GET['id']);
         $result = $pdo_statement->execute();
         var_dump($result);
+
+        header ("Location: read.php");
+        exit(); // возвращаемся в read.php
         }
 //var_dump($item);
 ?>
@@ -22,7 +25,7 @@
 /**update */
 
 if (isset($_GET['id'])) {
-    echo ('Problem:');
+    echo ('UPDATE:');
 
     $pdo = new PDO('mysql:host=localhost;dbname=forma', 'root', 'ctvbyfhbz');
     $sql = "SELECT * FROM article WHERE id=:id";
