@@ -29,8 +29,8 @@ echo ('Problem:');
        <td><?php echo ($value['description']) ?></td>
        <td><?php echo ($value['created_at']) ?></td>
         <td>
-            <a href="Update.php?id=<?php echo $value['id'];?>"> Update</a>
-            <a href="Delete.php?id=<?php echo $value['id'];?>"> Delete</a>
+            <a href="update.php?id=<?php echo $value['id'];?>"> Update</a>
+            <a href="delete.php?id=<?php echo $value['id'];?>"> Delete</a>
         </td>
        </tr>
     <?php } ?>
